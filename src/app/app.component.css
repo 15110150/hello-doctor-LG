@@ -1,0 +1,8 @@
+.text-center{
+    align-items: center;
+}
+.btnSubmit{
+    background: #09548E;
+    color: white;
+    height: 30px;
+}

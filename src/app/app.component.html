@@ -1,21 +1,394 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="header">
+  <div class="logo">
+    <h1><a href="index.html">Hello<span> Doctor</span></a></h1>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <nav class="linkEffects linkHoverEffect_2">
+        <ul>
+          <li><a href="index.html" data-link-alt="Home" class="active"><span>Trang chủ</span></a></li>
+          <li><a href="#gallery" data-link-alt="gallery" class="scroll"><span>Tin tức</span></a></li>
+          <li><a href="#patient" data-link-alt="about" class="scroll"><span>Cho bệnh nhân</span></a></li>
+          <li><a href="#services" data-link-alt="services" class="scroll"><span>Cho bác sĩ</span></a></li>
+          <li><a href="#testimonials" data-link-alt="testimonials" class="scroll"><span>Liên hệ</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- navigation khi thu nhỏ màn hình-->
+  <div class="top-left">
+    <div class="top-nav">
+      <nav class="navbar navbar-default">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
 
-<router-outlet></router-outlet>
+        </div>
+        <!-- navbar-header bình thường-->
+
+
+      </nav>
+      <div class="clearfix"> </div>
+    </div>
+
+  </div>
+  <div class="clearfix"> </div>
+  <div class="agile-top-header">
+    <!--Tên logo-->
+
+    <!-- //navigation -->
+  </div>
+</div>
+<!--Slider-->
+<slideshow [height]="height" [minHeight]="'800px'" [autoPlay]="true" [showArrows]="false" [imageUrls]="imageSources"
+  [lazyLoad]="imageSources?.length > 1" [autoPlayWaitForLazyLoad]="true">
+</slideshow>
+<!--//Slider-->
+
+<div class="main" id="main">
+  <div class="w3layouts_main_grid">
+    <div class="booking-form-head-agile">
+      <h3>Bác sĩ đăng kí tham gia</h3>
+    </div>
+      <div class="w3_agileits_main_grid w3l_main_grid">
+        <div class="agileits_grid">
+          <h5>Tên </h5>
+          <input [(ngModel)]="doctor.name" type="email" placeholder="ex : myname@gmail.com" />
+        </div>
+      </div>
+      <div class="w3_agileits_main_grid w3l_main_grid">
+        <div class="agileits_grid">
+          <h5>E-mail </h5>
+          <input [(ngModel)]="doctor.email" type="email" placeholder="ex : myname@gmail.com" />
+        </div>
+      </div>
+      <div class="agileits_main_grid w3_agileits_main_grid">
+        <div class="agileits_grid">
+          <h5>Chuyển ngành </h5>
+          <input [(ngModel)]="doctor.department" type="email" placeholder="ex : myname@gmail.com" />
+        </div>
+      </div>
+      <div class="w3_agileits_main_grid w3l_main_grid">
+        <div class="agileits_grid">
+          <h5>Tên phòng khám </h5>
+          <input [(ngModel)]="doctor.addressTitle" type="email" />
+        </div>
+      </div>
+      <div class="w3_agileits_main_grid w3l_main_grid">
+        <div class="agileits_grid">
+          <h5>Địa chỉ </h5>
+          <input [(ngModel)]="doctor.address" type="email" />
+        </div>
+      </div>
+      <div class="w3_agileits_main_grid w3l_main_grid">
+        <div class="agileits_grid">
+          <h5>Số diện thoại </h5>
+          <input [(ngModel)]="doctor.phoneNumber" type="email" />
+        </div>
+      </div>
+      <div class="w3_agileits_main_grid w3l_main_grid">
+        <div class="agileits_grid">
+          <h5>Nởi làm việc hiện tại </h5>
+          <input [(ngModel)]="doctor.workOfficetype" type="email" />
+        </div>
+      </div>
+      <div class="w3_agileits_main_grid w3l_main_grid">
+        <div class="text-center">
+          <input (click)="btnRegister_click(doctor)" type="submit" value="Đăng kí" class="btnSubmit">
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+  </div>
+
+</div>
+<!-- //header -->
+<!-- /services -->
+<div class="services" id="services">
+  <div class="container">
+    <div class="services-agile-head">
+      <h3>Dịch vụ</h3>
+    </div>
+    <div class="w3-agile-grids">
+      <div class="col-md-6 w3-agile-services-left">
+        <div class="w3-services-text">
+          <ul class="services-head">
+            <li>
+              <h3>15</h3>
+            </li>
+            <li>
+              <h5>Năm kinh nghiệm</h5>
+            </li>
+          </ul>
+          <p>Chúng tôi cung cấp các dịch vụ như đặt lịch khám, xem lịch sử khám bệnh, thuận tiện cho bệnh nhân và các
+            bác sĩ. Giờ đây, chỉ với vài cú click chuột, bạn đã có thể đặt 1 lịch khám nhanh, tiết kiệm thời gian, chi
+            phí
+            đi lại.</p>
+        </div>
+        <div class="col-md-4 services-icon1">
+          <i class="fa fa-h-square" aria-hidden="true"></i>
+          <h4>Hiện đại</h4>
+        </div>
+        <div class="col-md-4 services-icon1">
+          <i class="fa fa-briefcase" aria-hidden="true"></i>
+          <h4>An toàn</h4>
+        </div>
+        <div class="col-md-4 services-icon1">
+          <i class="fa fa-plane" aria-hidden="true"></i>
+          <h4>Nhanh chóng</h4>
+        </div>
+
+      </div>
+      <div class="col-md-6 w3-agile-services-right">
+        <img src="../assets/img/handphone.png" alt="services">
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+<!-- /about -->
+<div class="w3-aglile-about" id="patient">
+  <div class="w3-aglie-about-grid2">
+    <div class="col-md-6 w3-about-text1-grid">
+      <div class="w3-about-text-heads">
+        <h3><strong>Dành cho bệnh nhân</strong></h3>
+        <h4>Ưu đãi 20%</h4>
+        <h4>Đặt lịch mọi lúc, mọi nơi</h4>
+        <h4>Xem hồ sơ bác sĩ</h4>
+        <ul class="about-list">
+          <li><a href="https://steel-citizen-193608.appspot.com">Get App</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-6 w3-about-img-grid">
+
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+<!-- /about -->
+
+
+<!-- //services-->
+<div class="services" id="doctor">
+  <div class="container">
+    <div class="services-agile-head">
+    </div>
+    <div class="w3-aglie-about-grid2">
+      <div class="col-md-6 w3-about-text2-grid">
+        <div class="w3-about-text-heads">
+          <h3><strong>Dành cho bác sĩ</strong></h3>
+          <h4>Nhận lịch nhanh</h4>
+          <h4>Nhận lịch mọi lúc, mọi nơi</h4>
+          <h4>Tăng thu nhập</h4>
+          <ul class="about-list">
+            <li><a href="https://responsive-seat-235915.appspot.com">Get App</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 w3-agile-services-right">
+      <img src="../assets/img/handphoneCopy.png" alt="services">
+    </div>
+    <div class="clearfix"></div>
+</div>
+</div>
+<!-- //Gallery -->
+
+<!-- Testimonials -->
+<div id="review" class="jarallax reviews agile-1">
+  <div class="w3-agile-test-monials" id="testimonials">
+    <div class="client-review-head">
+      <h3>Our customers Says</h3>
+      <div class="sreen-gallery-cursual">
+        <div id="owl-demo" class="owl-carousel">
+          <div class="item-owl">
+            <div class="test-review wow fadeInUp animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+              <p><img src="/src/images/left-quotes.png" alt=""> Polite sadipscing elitr, sed diam nonumy eirmod tempor
+                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco<img src="/src/images/right-quotes.png"
+                  alt=""></p>
+              <img src="/src/images/test2.jpg" class="img-responsive" alt="" />
+              <h5>Henry</h5>
+            </div>
+          </div>
+          <div class="item-owl">
+            <div class="test-review wow fadeInUp animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+              <p> <img src="/src/images/left-quotes.png" alt="">Polite sadipscing elitr, sed diam nonumy eirmod tempor
+                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco<img src="images/right-quotes.png"
+                  alt=""></p>
+              <img src="/src/images/test1.jpg" class="img-responsive" alt="" />
+              <h5>Smith</h5>
+            </div>
+          </div>
+          <div class="item-owl">
+            <div class="test-review wow fadeInUp animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+              <p><img src="/src/images/left-quotes.png" alt=""> Polite sadipscing elitr, sed diam nonumy eirmod tempor
+                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco <img src="images/right-quotes.png"
+                  alt=""></p>
+              <img src="/src/images/test3.jpg" class="img-responsive" alt="" />
+              <h5>Steave</h5>
+            </div>
+          </div>
+        </div>
+        <!--//screen-gallery-->
+      </div>
+    </div>
+    <div class="clearfix"> </div>
+  </div>
+</div>
+<!-- //Testimonials -->
+
+
+<!-- js files -->
+<!-- For-Banner -->
+<script src="js/responsiveslides.min.js"></script>
+<script>
+  // You can also use "$(window).load(function() {"
+  $(function () {
+    $("#slider").responsiveSlides({
+      auto: true,
+      manualControls: '#slider3-pager',
+    });
+  });
+</script>
+<!-- //For-Banner -->
+<!-- contact form -->
+<div class="contact-form" id="contact-form">
+  <div class="container">
+    <div class="contact-agileits-title">
+      <h3>Contact Us</h3>
+    </div>
+    <div class="clearfix"></div>
+    <!--get in touch start here-->
+    <div class="get-touch" id="contact1">
+      <div class="get-touch-main">
+        <div class="get-touch-bottom">
+          <form action="#" method="post">
+            <input type="text" placeholder="First Name" name="First Name" required="">
+            <input type="text" class="no-mar" placeholder="Last Name" required="">
+            <input type="text" placeholder="Phone Number" name="phone" required="">
+            <input type="email" class="no-mar" placeholder="Email" name="Email" required="">
+            <textarea placeholder="Message" name="Message" required=""></textarea>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--get in touch end here-->
+  </div>
+</div>
+
+<!-- contact -->
+<div class="contact" id="contact">
+  <div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12107.26650393514!2d-112.05321904089281!3d40.6559724368103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x35a5211d879631be!2sHexcel+Corporation!5e0!3m2!1sen!2sin!4v1491470367982"></iframe>
+
+    <div class="container">
+      <div class="agileinfo_map_color">
+        <div class="agileinfo_map_color_grid">
+          <div class="col-md-6 contact-up">
+            <div class="agileinfo_map_color_grid_left">
+              <h4>Contact us</h4>
+              <p>123 san francisco <span>New York City USA</span></p>
+              <p>+00 1111 222</p>
+              <p>+12 322 3333</p>
+
+            </div>
+          </div>
+          <div class="col-md-6 contact-up1">
+            <div class="agileinfo_map_color_grid_left">
+              <h4>Mail us</h4>
+              <p><a href="mailto:example@mail.com"> mail@example.com</a></p>
+              <h4>catch on</h4>
+              <ul class="map-top-icon">
+                <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                <li><i class="fa fa-google-plus" aria-hidden="true"></i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- //contact -->
+<!--footer-->
+<div class="footer-w3">
+  <p>&copy; 2017 Dream Hotel. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+</div>
+<!--//footer-->
+<script src="/src/js/easyResponsiveTabs.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#horizontalTab').easyResponsiveTabs({
+      type: 'default', //Types: default, vertical, accordion           
+      width: 'auto', //auto or any width like 600px
+      fit: true   // 100% fit in a container
+    });
+  });		
+</script>
+<!-- //script for portfolio -->
+<!-- //For-Gallery-js -->
+<!-- for-Testimonials -->
+<!-- required-js-files-->
+<link href="../src/css/owl.carousel.css">
+<script src="../src/js/owl.carousel.js"></script>
+<script>
+  $(document).ready(function () {
+    $("#owl-demo").owlCarousel({
+      items: 1,
+      lazyLoad: true,
+      autoPlay: true,
+      navigation: false,
+      navigationText: false,
+      pagination: true,
+    });
+  });
+</script>
+<!--//required-js-files-->
+<!-- //for-Testimonials -->
+<!-- Calendar -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+<script src="/src/js/jquery-ui.js"></script>
+<script>
+  $(function () {
+    $("#datepicker,#datepicker1").datepicker();
+  });
+</script>
+<!-- //Calendar -->
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function ($) {
+    $(".scroll").click(function (event) {
+      event.preventDefault();
+      $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+    });
+  });
+</script>
+<!-- start-smoth-scrolling -->
+<!-- smooth scrolling-bottom-to-top -->
+<script type="text/javascript">
+  $(document).ready(function () {
+    /*
+      var defaults = {
+      containerID: 'toTop', // fading element id
+      containerHoverID: 'toTopHover', // fading element hover id
+      scrollSpeed: 1200,
+      easingType: 'linear' 
+      };
+    */
+    $().UItoTop({ easingType: 'easeOutQuart' });
+  });
+</script>
+<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<script src="js/SmoothScroll.min.js"></script>

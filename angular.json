@@ -23,9 +23,49 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              {
+                "input": "src/css/bootstrap.css"
+              },
+              {
+                "input": "src/css/jquery-ui.css"
+              },
+              {
+                "input": "src/css/font-awesome.css"
+              },
+              {
+                "input": "src/css/owl.carousel.css"
+              },
+              {
+                "input": "src/css/style.css"
+              }
             ],
-            "scripts": [],
+            "scripts": [
+              {
+                "input": "src/js/bootstrap.js"
+              },
+              {
+                "input": "src/js/easing.js"
+              },
+              {
+                "input": "src/js/easyResponsiveTabs.js"
+              },
+              {
+                "input": "src/js/jquery-2.1.4.min.js"
+              },
+              {
+                "input": "src/js/jquery-ui.js"
+              },
+              {
+                "input": "src/js/move-top.js"
+              },
+              {
+                "input": "src/js/owl.carousel.js"
+              },
+              {
+                "input": "src/js/responsiveslides.min.js"
+              }
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
